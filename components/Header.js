@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import DarkMode from './Header/DarkMode';
 import List from './Header/List';
-import Plus from '../public/plusdark.svg';
+import Plus from '../public/plus.svg';
 const Header = ({ children, invisible = false, image, list }) => {
   const path = useRouter().pathname;
   const [showCreateOptions, setShowCreateOptions] = useState(false);

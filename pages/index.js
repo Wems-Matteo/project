@@ -12,7 +12,6 @@ const Home = ({ session }) => {
   const [trueList, setTrueList] = useState([]);
   const [list, setList] = useState([]);
   const [research, setResearch] = useState('');
-  
   const fetchAlcohols = async () => {
     try {
       const res = await axios.get('/api/alcohols');
