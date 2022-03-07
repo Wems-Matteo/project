@@ -3,8 +3,8 @@ import { updateList } from '../../actions/list.actions';
 const List = ({ invisible = false, list }) => {
   const dispatch = useDispatch();
   if (!invisible) {
-    list.sort();
-    console.log(list);
+    list.sort((a, b) => a > b ? 1 : -1);
+    console.log('list', list);
     list = [...new Set(list)];
     list = list.map(each => { return (
       <li className='px-3' key={ each._id }>
