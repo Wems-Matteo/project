@@ -8,7 +8,6 @@ const DarkMode = () => {
     if (userData.mode) document.querySelector('#checkbox').checked = true;
   }, [userData]);
   useEffect(() => {
-    console.log(document.cookie)
     if (document.cookie.includes('dark=true')) {
       document.documentElement.classList.add('dark');
       document.querySelector('#checkbox').checked = true;
