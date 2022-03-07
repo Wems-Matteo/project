@@ -4,6 +4,7 @@ const List = ({ invisible = false, list }) => {
   const dispatch = useDispatch();
   if (!invisible) {
     list.sort();
+    console.log(list);
     list = [...new Set(list)];
     list = list.map(each => { return (
       <li className='px-3' key={ each._id }>
