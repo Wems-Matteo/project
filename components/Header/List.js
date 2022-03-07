@@ -3,9 +3,8 @@ import { updateList } from '../../actions/list.actions';
 const List = ({ invisible = false, list }) => {
   const dispatch = useDispatch();
   if (!invisible) {
-    list.sort((a, b) => a.alcohol > b.alcohol ? 1 : -1);
-    console.log('list333', list);
     list = [...new Set(list)];
+    list.sort((a, b) => a.alcohol > b.alcohol ? 1 : -1);
     list = list.map(each => { return (
       <li className='px-3' key={ each._id }>
         <button onClick={ () => dispatch(updateList(each)) }>
