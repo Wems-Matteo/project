@@ -4,7 +4,7 @@ const List = ({ invisible = false, list }) => {
   const dispatch = useDispatch();
   if (!invisible) {
     list.sort((a, b) => a?.name > b?.name ? 1 : -1);
-    console.log('list', list);
+    console.log('list222', list);
     list = [...new Set(list)];
     list = list.map(each => { return (
       <li className='px-3' key={ each._id }>
