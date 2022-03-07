@@ -3,7 +3,7 @@ import { updateList } from '../../actions/list.actions';
 const List = ({ invisible = false, list }) => {
   const dispatch = useDispatch();
   if (!invisible) {
-    list.sort((a, b) => a?.name > b?.name ? 1 : -1);
+    list.sort((a, b) => a?.alcohol > b?.alcohol ? 1 : -1);
     console.log('list222', list);
     list = [...new Set(list)];
     list = list.map(each => { return (
